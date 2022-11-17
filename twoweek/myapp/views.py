@@ -1,7 +1,7 @@
 from datetime import date
 from django.shortcuts import render
 from django.views import generic
-from accounts.models import Application
+from app.models import Application
 import datetime
 
 def index(request):
