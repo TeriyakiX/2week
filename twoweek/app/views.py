@@ -47,6 +47,9 @@ def profile(request):
 class view_applications(generic.ListView):
     model = Application
     paginate_by = 5
+    template_name = 'accounts/application_detail.html'
+
+    # template_name = 'accounts/application_list.html'
 
     def get_queryset(self):
         ordering = self.request.GET.get('orderby')
@@ -80,6 +83,7 @@ def get_error(request):
 class profile_main_applications(generic.ListView):
     model = Application
     paginate_by = 4
+    template_name = 'accounts/application_list.html'
 
     def get_context_data(self, *, object_list=None, **kwargs):
         context = super().get_context_data(**kwargs)
